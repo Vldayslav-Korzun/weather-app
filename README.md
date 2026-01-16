@@ -18,22 +18,6 @@ The application provides:
 
 ---
 
-## Architecture
-
-┌────────────┐ ┌──────────────┐
-│ Frontend   JWT   Backend    
-│ Angular    ─▶  Spring Boot │
-│ (8088) │ │       (8083) │
-└─────▲──────┘ └─────▲────────┘
-│   OAuth2    │      JPA
-│     ▼
-┌─────┴──────┐ ┌──────────────┐
-│  Keycloak  │ │  PostgreSQL  │
-│   (8080)   │ │    (5432)    │
-└────────────┘ └──────────────┘
-
----
-
 ## Technology Stack
 
 ### Backend

@@ -1,0 +1,31 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/weatherdb
+    username: weather
+    password: weatherpass
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: "http://localhost:8080/realms/weather"
+          jwk-set-uri: "http://[::1]:8080/realms/weather/protocol/openid-connect/certs"
+
+springdoc:
+  swagger-ui:
+    path: /swagger
+
+logging:
+  level:
+    org.springframework.security.oauth2: TRACE
+    org.springframework.web.client.RestTemplate: DEBUG
+    org.springframework.web.reactive.function.client.ExchangeFunctions: TRACE

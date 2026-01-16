@@ -1,0 +1,72 @@
+# ------------------------------------------------------------
+# Global / System
+# ------------------------------------------------------------
+
+.DS_Store
+Thumbs.db
+*.log
+
+# ------------------------------------------------------------
+# IDEs
+# ------------------------------------------------------------
+
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+*.launch
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/mcp.json
+.history/
+
+# ------------------------------------------------------------
+# Frontend (Node / Angular)
+# ------------------------------------------------------------
+
+node_modules/
+dist/
+tmp/
+out-tsc/
+bazel-out/
+.angular/cache/
+coverage/
+testem.log
+npm-debug.log
+yarn-error.log
+libpeerconnection.log
+connect.lock
+__screenshots__/
+
+# ------------------------------------------------------------
+# Backend (Java / Spring Boot)
+# ------------------------------------------------------------
+
+target/
+build/
+
+# ------------------------------------------------------------
+# Environment / Secrets
+# ------------------------------------------------------------
+
+.env
+.env.*
+*.pid
+.frontend.pid
+
+# ------------------------------------------------------------
+# Docker / runtime helpers
+# ------------------------------------------------------------
+
+run.ps1
+
+# ------------------------------------------------------------
+# Keycloak (realm exports, secrets)
+# ------------------------------------------------------------
+
+keycloak/*.json

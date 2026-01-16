@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weather Forecast</title>
+</head>
+<body>
+  <h1>Weather Forecast</h1>
+
+  <input id="city" value="Berlin" />
+  <button onclick="load()">Get forecast</button>
+
+  <pre id="out"></pre>
+
+  <script>
+    async function load() {
+      const city = document.getElementById("city").value;
+      const res = await fetch("http://localhost:8083/api/forecast?city=" + city);
+      const json = await res.json();
+      document.getElementById("out").textContent =
+        JSON.stringify(json, null, 2);
+    }
+  </script>
+</body>
+</html>
